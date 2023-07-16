@@ -1,0 +1,279 @@
+@import url(./keyframes.css);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.solar-system-root {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* background-image: url(./assets/galaxies.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+#solar-system-sun {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url(./assets/sun.png);
+    animation: planetRounding;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#solar-system-mercuryo {
+    width: 89px;
+    height: 89px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.795);
+    position: absolute;
+    animation: planetRounding;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#solar-system-mercuryo:after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -4px;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-image: url(./assets/mercuryo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: planetRounding;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+#solar-system-venus {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.795);
+    position: absolute;
+    animation: planetRounding;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+#solar-system-venus:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 19px;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-image: url(./assets/venus.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: planetRoundingReverse;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#solar-system-earth {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.795);
+    position: absolute;
+    animation: planetRounding;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#solar-system-earth:after {
+    content: "";
+    position: absolute;
+    top: 160px;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-image: url(./assets/earth.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: planetRounding;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#solar-system-mars {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.795);
+    position: absolute;
+    animation: planetRounding;
+    animation-duration: 23s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#solar-system-mars:after {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 30px;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-image: url(./assets/mars.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: planetRounding;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#solar-system-jupiter {
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.795);
+    position: absolute;
+    animation: planetRounding;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#solar-system-jupiter:after {
+    content: "";
+    position: absolute;
+    top: 140px;
+    left: -20px;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #8b3f49;
+    background-image: url(./assets/jupiter.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: planetRounding;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#solar-system-saturn {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.795);
+    position: absolute;
+    animation: planetRounding;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#solar-system-saturn:after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 6px;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgb(244, 216, 166);
+    background-image: url(./assets/saturn.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: planetRounding;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#solar-system-uranus {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.795);
+    position: absolute;
+    animation: planetRounding;
+    animation-duration: 110s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#solar-system-uranus:after {
+    content: "";
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(17, 48, 94);
+    background-image: url(./assets/uranus.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: planetRoundingReverse;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#solar-system-neptun {
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.795);
+    position: absolute;
+    animation: planetRounding;
+    animation-duration: 110s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#solar-system-neptun:after {
+    content: "";
+    position: absolute;
+    top: 400px;
+    right: -1px;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(17, 48, 94);
+    background-image: url(./assets/neptun.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: planetRounding;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
